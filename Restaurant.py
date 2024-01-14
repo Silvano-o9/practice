@@ -47,3 +47,8 @@ elif pedido == "Cafe":
  						print("Cafe 100 ml")
  						unidadC += 1
  					print("Have a perfec day.")
+ 		else:
+ 			print("Sorry, son las 2:37 am y me da pereza programar más, así que bueno, las otras se acabaron, solo hay 3 en realidad")
+ 	elif eleccionMC == 200:
+ 			print(f"Muchas gracias por su pedido, el costo del Cafe de {100} ml es de {10} dollars")
+# creo  que no mañanero conectar elif sin repetir código.
