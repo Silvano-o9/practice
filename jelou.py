@@ -1,1 +1,1 @@
-print("jelou v1.1")
+print("jelou v1.1.")
