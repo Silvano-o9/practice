@@ -1,5 +1,6 @@
 print("Bienveninos a este Restaurante")
 dollar = 0
+unidad = 0
 precioAT = 16
 precioC100M = 10
 precioC200M = 25
@@ -54,7 +55,7 @@ elif pedido == "Cafe":
  						unidadC += 1
  					print("Have a perfec day.")
  		else:
- 			print("Ok, solo se le dará 1 unidad")
+ 			print("I'm sorry, la opción no es validad, elija otra, please")
  			#Aqui se acaba eleccionMC == 100 (O café de 100 milímetros, he inicia eleccionMC 200 o (Café de 100 milímetros)
  			
  	elif eleccionMC == 200:
@@ -72,7 +73,7 @@ elif pedido == "Cafe":
  						print("Cafe 100 ml")
  						unidadC += 1
  						print("Have a perfec day.")
- 				#Aqui finaliza el proceso de compra de la unidad 2 de la eleccionMC 200 he inicia la unidad 3
+ 				#Aqui finaliza el proceso de compra de la unidad 2 de la eleccionMC 200 ha inicia la unidad 3
  	elif unidad == 3:
  										print(f"Muchas gracias por su compra, el costo de su pedido es de {75} dollars")
  										dollar = int(input("Por favor, pague aquí "))
@@ -85,5 +86,25 @@ elif pedido == "Cafe":
  						unidadC += 1
  				print("Have a perfec day.")
  						
-
- 					
+ 						# Se acaba eleccionMC = 200 he inica eleccionMC = 500
+ 						
+ 	elif eleccionMC == 500:
+    	 print(f"Gracias por su pedido, el costo del Café de {500} ml es de {50} dollars")
+    	 unidad = int(input(f"¿Cuantos desea? {2}. {3}. o solo {1}. "))
+    	 if unidad == 1:
+ 							print("Una lástima, 2 o 3 hubiera sido mejor, pero lo comprendemos,")
+ 							print("El precio de su pedido es de {50} dollars")
+ 							dollar = int(input("Por favor, pague aquí "))
+ 							if dollar == 50:
+ 								print("Muchas gracias por su compra de {1} cafe, su pedido se le entregará enseguida")
+ 								print("1 Café (500ml)")
+ 							elif dollar > 50:
+ 								print("Muchas gracias por su compra y su gran gesto al recompensarnos con propina, sin duda le gusto el servicio, le entregaremos su café en seguida")
+ 								print("1 Café (500ml)")
+ 							else:
+ 								print("Hey friend, póngase a trabajar, ande a chambear")
+ 								
+ 							#Fin de la unidad 1, empieza la 2	
+ 								
+ 								if unidad == 2: print("Vamos, llévate 3 se que lo quieres, lo deseas")
+ 						# delete this in the next coding and además recuerda hacer el elif más un input creo que antes (o más o menos) para pues darle la opción de elegir, también actualizar algunas cosas para darle más vida a esto. Goodbye.						
