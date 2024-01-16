@@ -104,7 +104,30 @@ elif pedido == "Cafe":
  							else:
  								print("Hey friend, póngase a trabajar, ande a chambear")
  								
- 							#Fin de la unidad 1, empieza la 2	
- 								
- 								if unidad == 2: print("Vamos, llévate 3 se que lo quieres, lo deseas")
- 						# delete this in the next coding and además recuerda hacer el elif más un input creo que antes (o más o menos) para pues darle la opción de elegir, también actualizar algunas cosas para darle más vida a esto. Goodbye.						
+ 						#fin de la unidad 1, empieza la 2.
+ 								   
+if unidad == 2:
+	wow = input("Vamos, uno más ¿si? y/n ")
+	if wow == "y":
+		print("Esoo, le daremos +1 totalmente gratis por ser un buen cliente")
+		print("El precio de su pedido es de 100 dollars")
+		dollar = int(input("Please, pagué aquí "))
+		if dollar == 100:
+			print("Gracias por su pedido, pase un buen día")
+			while unidadC <= 3:
+				print(f"Café ({500})ml")
+				unidadC += 1
+if wow == "n":
+					print("Una pena")
+					print("El precio de su pedido es de 100 dollars")
+					dollar = int(input("Please, pague aquí "))
+					if dollar == 100:
+						print("Gracias por su compra")
+						while unidadC <= 2:
+							print("Café {(500})ml")
+							unidadC += 1
+							
+print("Que pase un buen resto del día")
+							
+							#Fin de la unidad 2, empieza la unidad 3 del Café 500ml. I see you in the next coding
+	
