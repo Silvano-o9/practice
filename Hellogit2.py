@@ -1,2 +1,2 @@
 print("Hemos estado bien")
-print("rere bien no, lo siguiente")
+print("rere good no, lo siguiente")
