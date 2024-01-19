@@ -1,13 +1,14 @@
 print("Bienveninos a este Restaurante")
 dollar = 0
+wow = ""
 unidad = 0
 precioAT = 16
 precioC100M = 10
 precioC200M = 25
 precioC500M = 50
-precioC1000M = 100
 unidadC = 0
 pedido = ""
+error = "soporte"
 print("Aqui esta el menú: Arroz. Cafe. Carne. Leche. Jugo. Té. Brocoli. Bacalao. Confles. Pescado. Spaghetti. ")
 
 pedido = input("Que desea llevar ")
@@ -25,7 +26,7 @@ if pedido == "Arroz":
 elif pedido == "Cafe":
  	eleccion = print("Genial, ¿De cuantos mililitros quiere su Cafe?")
  	#Aqui pide de cuantos milímetros quiere el cafe
- 	eleccionMC = int(input(f"De {100} ml, {200} ml, {500} ml, o {1000} ml." ))
+ 	eleccionMC = int(input(f"De {100} ml, {200} ml, {500} ml." ))
  	#Aqui le da la opción al usuario para que elija, no tiene que poner "ml",solo con el número basta, o sea, 100. 200. o 500"
  	if eleccionMC == 100:
  		print(f"Muchas gracias por su pedido, el costo del Cafe de {100} ml es de {10} dollars")
@@ -112,6 +113,7 @@ if unidad == 2:
 		print("Esoo, le daremos +1 totalmente gratis por ser un buen cliente")
 		print("El precio de su pedido es de 100 dollars")
 		dollar = int(input("Please, pagué aquí "))
+		print("Vayase al diablo entonces")
 		if dollar == 100:
 			print("Gracias por su pedido, pase un buen día")
 			while unidadC <= 3:
@@ -124,10 +126,32 @@ if wow == "n":
 					if dollar == 100:
 						print("Gracias por su compra")
 						while unidadC <= 2:
-							print("Café {(500})ml")
+							print(f"Café ({500})ml")
 							unidadC += 1
-							
-print("Que pase un buen resto del día")
-							
-							#Fin de la unidad 2, empieza la unidad 3 del Café 500ml. I see you in the next coding
-	
+							print("Pase un lindo día ")
+							class Unidad3_3:
+								
+								error
+								
+if unidad == 3:
+									print("Eso es, ni uno ni dos, 3 de una vez,  usted si es un buen bebedor de Café no como esos del 'ay el café le hace daño al corazón' (acto seguido lo ves fumando vape XD")
+									print("Dejémonos de cuentos, el precio de su café es de {150} dollars")
+									dollar = int(input(f"Como buen bebedor de Café, le daremos una rebaja de {20} dollars,  asi que, puede pagar {130} dollars,  pero viniendo de usted, seguro que nos da propina: "))
+									if dollar < 150:
+										
+										print("Gracias por hacer efectiva su rebaja por ser un buen cliente, se le quiere mucho")
+										while unidadC < 3:
+											print(f"Café ({500}) ml")
+											unidadC += 1
+										
+										print("Que pase un maravilloso resto del día, le deseo lo mejor")
+									elif dollar  >= 150:
+												print("Gracias de todas formas, y se le agradece su propina")
+												
+												while unidadC < 3:
+													print(f"Café ({500}) ml")
+													unidadC += 1
+												
+												print("Pase un lindo día, se le quiere")
+												
+												#Fin definitivo de la eleccion de café, iba a hacer una unidad de 1000 ml, pero se cancela por ahora, (y probablemente para siempre), en fin, have a nice night. in the next coding, session Carne y la otra opción del Arroz.
