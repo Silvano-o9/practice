@@ -1,2 +1,4 @@
-Hellogit2.py
-gitflow
+debian/files
+debian/*.substvars
+debian/*.debhelper.log
+debian/*/*
