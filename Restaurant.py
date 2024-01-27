@@ -2,24 +2,42 @@ print("Bienveninos a este Restaurante")
 dollar = 0
 wow = ""
 unidad = 0
+eleccionA = ""
 precioAT = 16
+Tcarne = ""
+precioAP = 28
 precioC100M = 10
 precioC200M = 25
 precioC500M = 50
 unidadC = 0
+selection = ""
 pedido = ""
 error = "soporte"
+
+TCcarne = ["Bleu", "Inglés", "Termino medio", "Tres cuartos", "Bien Cocido"]
+Tcarne = ["Cerdo", "Pollo", ]
+TPcarne = ["Alas", "Mulo corto", "Mulo largo", "Pechuga",]
+
 print("Aqui esta el menú: Arroz. Cafe. Carne. Leche. Jugo. Té. Brocoli. Bacalao. Confles. Pescado. Spaghetti. ")
 
 pedido = input("Que desea llevar ")
 
 if pedido == "Arroz":
-	eleccion = input("Genial, ¿Quiere una taza o un plato de arroz? ")
-	if eleccion == "taza":
+	eleccionA = input("Genial, ¿Quiere una Taza o un Plato de arroz? ").capitalize()
+	
+	if eleccionA == "Taza":
 		print(f"Genial, su pedido es de {precioAT} dollars ")
-	dollar = int(input("Pague aqui: "))
-	if dollar == precioAT:
-		print("Muchas gracias")
+		dollar = int(input("Pague aqui: "))
+		if dollar == precioAT:
+			print("Muchas gracias")
+			
+			#version plato
+			
+if eleccionA == "Plato":
+			print(f"Genial, su pedido es de {28} dollars ")
+			dollar = int(input("Pague aqui: "))
+			if dollar >= 28:
+				print("Gracias")
 		
 		#Aqui se acaba la orden del Arroz he inica la orden del cafe
 
@@ -154,4 +172,15 @@ if unidad == 3:
 												
 												print("Pase un lindo día, se le quiere")
 												
-												#Fin definitivo de la eleccion de café, iba a hacer una unidad de 1000 ml, pero se cancela por ahora, (y probablemente para siempre), en fin, have a nice night. in the next coding, session Carne y la otra opción del Arroz.
+												#session carne
+ 
+elif pedido == "Carne":
+	print("De maravilla, gracias a dios no eres vegano, podrás disfrutar de lo que es SABROSO")
+	selection = 	input(f"De que le gustaría su carne: {Tcarne[0]} o {Tcarne[1]} ").capitalize()
+	if selection == "Cerdo":
+		print("Genial, la carne de cerdo está muy rica últimamente, y, ¿Como le gustaría su corte?")
+		for wow in TCcarne:
+			print(wow)
+	input(": ")
+
+#Arrozcomplet, carne en process, in the next coding, 1r session carne
