@@ -4,23 +4,58 @@ wow = ""
 unidad = 0
 eleccionA = ""
 precioAT = 16
-Tcarne = ""
 precioAP = 28
 precioC100M = 10
 precioC200M = 25
 precioC500M = 50
 unidadC = 0
+of_in = ""
 selection = ""
 pedido = ""
 error = "soporte"
 
+def session_buy():
+	xc = 1
+	dollaR = 0
+	print(f"Good buy, el precio de su pedido {TCcarne[0]} es de {35} dollars")
+	dollaR = int(input("Please,  pague aquí su pedido: "))
+	if dollaR >= 35:
+		print("Muchas gracias por su compra")
+		while xc <= 1:
+			print(TCcarne[0])
+			print("Have a perfect day")
+			xc += 1
+
+def process_tobuy(item, precio, session):
+	print(f"Muy buen gusto, su pedido: {item} es de ${precio} dollars ")
+	print(f"¿Cuantas unidades deseas {UNIDADES}")
+	universal = int(input(":"))
+	if universal == 1:
+		print("Muchas gracias por su compra")
+		for i in range(universal):
+			print(f"Pedido: Unidad: {session}, {item} ${precio}")
+	elif universal == 2:
+		print('Muchas gracias por su compra')
+		for i in range(universal):
+			print(f"Pedido: Unidad: {session}, {item}, ${precio}")
+			print("Have a nice day")
+	elif universal == 3:
+		print("Muchas gracias por su compra")
+		for i in range(universal):
+		  print(f"Pedido: Unidad: {session}, {item}, ${precio}")
+		  print("Have a perfect day")
+			
+
 TCcarne = ["Bleu", "Inglés", "Termino medio", "Tres cuartos", "Bien Cocido"]
 Tcarne = ["Cerdo", "Pollo", ]
 TPcarne = ["Alas", "Mulo corto", "Mulo largo", "Pechuga",]
+UNIDADES = (1, 2, 3)
 
-print("Aqui esta el menú: Arroz. Cafe. Carne. Leche. Jugo. Té. Brocoli. Bacalao. Confles. Pescado. Spaghetti. ")
+Menú = ["Cafe", "Arroz", "Carne", "Leche", "Jugo", "Té", "Brocoli", "Bacalao", "Pescado", "Spaghetti"]
 
-pedido = input("Que desea llevar ")
+print("Aqui esta el menú: Arroz. Cafe. Carne. Leche. Jugo. Té. Brocoli. Bacalao. Pescado. Spaghetti. ")
+
+pedido = input("Que desea llevar ").capitalize()
 
 if pedido == "Arroz":
 	eleccionA = input("Genial, ¿Quiere una Taza o un Plato de arroz? ").capitalize()
@@ -181,6 +216,11 @@ elif pedido == "Carne":
 		print("Genial, la carne de cerdo está muy rica últimamente, y, ¿Como le gustaría su corte?")
 		for wow in TCcarne:
 			print(wow)
-	input(": ")
-
-#Arrozcomplet, carne en process, in the next coding, 1r session carne
+	of_in = input(": ").capitalize()
+	if of_in == "Bleu":
+		session_buy()
+	elif of_in == "Ingles":
+		process_tobuy(TCcarne[1], 75, Menú[2])
+		
+	# I see you tomorrow 
+		
