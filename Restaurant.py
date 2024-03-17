@@ -27,25 +27,35 @@ def session_buy():
 			xc += 1
 
 def process_tobuy(item, precio, session):
+	x = 0
+	money = 0
 	print(f"Muy buen gusto, su pedido: {item} es de ${precio} dollars ")
 	print(f"¿Cuantas unidades deseas {UNIDADES}")
 	universal = int(input(":"))
 	if universal == 1:
-		print("Muchas gracias por su compra")
-		for i in range(universal):
-			print(f"Pedido: Unidad: {session}, {item} ${precio}")
+		print(f"El precio de su pedido es de ${precio * universal}")
+		money = int(input("Please,  page aqui su pedido: "))
+		if money == precio * universal:
+		    	for x in range(universal):
+		    		print(f"Pedido: Unidad: {session}, {item} ${precio}")
 	elif universal == 2:
-		print('Muchas gracias por su compra')
-		for i in range(universal):
-			print(f"Pedido: Unidad: {session}, {item}, ${precio}")
-			print("Have a nice day")
-	elif universal == 3:
-		print("Muchas gracias por su compra")
-		for i in range(universal):
-		  print(f"Pedido: Unidad: {session}, {item}, ${precio}")
-		  print("Have a perfect day")
+		print(f"El precio de su pedido es de ${precio * universal}")
+		money = int(input("Please,  page aqui su pedido: "))
+		if money == precio * universal:
+		    	for x in range(universal):
+		    		print(f"Pedido: Unidad: {session}, {item} ${precio}")
 			
+	elif universal == 3:
+		print(f"El precio de su pedido es de ${precio * universal}")
+		money = int(input("Please,  page aqui su pedido: "))
+		if money == precio * universal:
+		    	for x in range(universal):
+		    		print(f"Pedido: Unidad: {session}, {item} ${precio}")
 
+
+	print("Have a nice day")
+		    
+					
 TCcarne = ["Bleu", "Inglés", "Termino medio", "Tres cuartos", "Bien Cocido"]
 Tcarne = ["Cerdo", "Pollo", ]
 TPcarne = ["Alas", "Mulo corto", "Mulo largo", "Pechuga",]
@@ -170,7 +180,7 @@ if unidad == 2:
 		if dollar == 100:
 			print("Gracias por su pedido, pase un buen día")
 			while unidadC <= 3:
-				print(f"Café ({500})ml")
+				print(f"Café ({500}ml)")
 				unidadC += 1
 if wow == "n":
 					print("Una pena")
@@ -179,7 +189,7 @@ if wow == "n":
 					if dollar == 100:
 						print("Gracias por su compra")
 						while unidadC <= 2:
-							print(f"Café ({500})ml")
+							print(f"Café ({500}ml)")
 							unidadC += 1
 							print("Pase un lindo día ")
 							class Unidad3_3:
@@ -188,7 +198,7 @@ if wow == "n":
 								
 if unidad == 3:
 									print("Eso es, ni uno ni dos, 3 de una vez,  usted si es un buen bebedor de Café no como esos del 'ay el café le hace daño al corazón' (acto seguido lo ves fumando vape XD")
-									print("Dejémonos de cuentos, el precio de su café es de {150} dollars")
+									print(f"Dejémonos de cuentos, el precio de su café es de {150} dollars")
 									dollar = int(input(f"Como buen bebedor de Café, le daremos una rebaja de {20} dollars,  asi que, puede pagar {130} dollars,  pero viniendo de usted, seguro que nos da propina: "))
 									if dollar < 150:
 										
@@ -211,16 +221,23 @@ if unidad == 3:
  
 elif pedido == "Carne":
 	print("De maravilla, gracias a dios no eres vegano, podrás disfrutar de lo que es SABROSO")
-	selection = 	input(f"De que le gustaría su carne: {Tcarne[0]} o {Tcarne[1]} ").capitalize()
+	selection = input(f"De que le gustaría su carne: {Tcarne[0]} o {Tcarne[1]} ").capitalize()
 	if selection == "Cerdo":
 		print("Genial, la carne de cerdo está muy rica últimamente, y, ¿Como le gustaría su corte?")
 		for wow in TCcarne:
-			print(wow)
+		    print(wow)
 	of_in = input(": ").capitalize()
 	if of_in == "Bleu":
 		session_buy()
 	elif of_in == "Ingles":
 		process_tobuy(TCcarne[1], 75, Menú[2])
+	elif of_in == "Termino medio":
+		process_tobuy(TCcarne[2], 125, Menú[2])
+	elif of_in == "Tres cuartos":
+		process_tobuy(TCcarne[3], 165, Menú[2])
+	elif of_in == "Bien cocido":
+		process_tobuy(TCcarne[4], 185, Menú[2])
 		
-	# I see you tomorrow 
-		
+	elif selection == "Pollo":
+	    print("Lo mejor de lo mejor, la carne de pollo")
+	
