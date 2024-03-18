@@ -224,20 +224,32 @@ elif pedido == "Carne":
 	selection = input(f"De que le gustaría su carne: {Tcarne[0]} o {Tcarne[1]} ").capitalize()
 	if selection == "Cerdo":
 		print("Genial, la carne de cerdo está muy rica últimamente, y, ¿Como le gustaría su corte?")
-		for wow in TCcarne:
+		for wow in TCcarne:	    
 		    print(wow)
-	of_in = input(": ").capitalize()
-	if of_in == "Bleu":
-		session_buy()
-	elif of_in == "Ingles":
-		process_tobuy(TCcarne[1], 75, Menú[2])
-	elif of_in == "Termino medio":
-		process_tobuy(TCcarne[2], 125, Menú[2])
-	elif of_in == "Tres cuartos":
-		process_tobuy(TCcarne[3], 165, Menú[2])
-	elif of_in == "Bien cocido":
-		process_tobuy(TCcarne[4], 185, Menú[2])
+		of_in = input(": ").capitalize()
+		if of_in == "Bleu":
+		    session_buy()	
+		elif of_in == "Ingles":
+		    process_tobuy(TCcarne[1], 75, Menú[2])
+		elif of_in == "Termino medio":
+		    process_tobuy(TCcarne[2], 125, Menú[2])
+		elif of_in == "Tres cuartos":
+		    process_tobuy(TCcarne[3], 165, Menú[2])
+		elif of_in == "Bien cocido":
+		    process_tobuy(TCcarne[4], 185, Menú[2])
 		
-	elif selection == "Pollo":
+		#session pollo
+		
+	if selection == "Pollo":
 	    print("Lo mejor de lo mejor, la carne de pollo")
-	
+	    print("¿Que parte le gustaría?")
+	    for wow in TPcarne:
+	        print(wow)
+	    of_in = input(": ").capitalize()
+	    
+	    if of_in == "Alas":
+	        
+	    
+	    
+	    
+	    
