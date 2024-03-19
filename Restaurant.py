@@ -1,5 +1,6 @@
 print("Bienveninos a este Restaurante")
 dollar = 0
+
 wow = ""
 unidad = 0
 eleccionA = ""
@@ -12,7 +13,7 @@ unidadC = 0
 of_in = ""
 selection = ""
 pedido = ""
-error = "soporte"
+error = "support"
 
 def session_buy():
 	xc = 1
@@ -25,6 +26,9 @@ def session_buy():
 			print(TCcarne[0])
 			print("Have a perfect day")
 			xc += 1
+
+
+
 
 def process_tobuy(item, precio, session):
 	x = 0
@@ -59,11 +63,38 @@ def process_tobuy(item, precio, session):
 TCcarne = ["Bleu", "Inglés", "Termino medio", "Tres cuartos", "Bien Cocido"]
 Tcarne = ["Cerdo", "Pollo", ]
 TPcarne = ["Alas", "Mulo corto", "Mulo largo", "Pechuga",]
+
+Tp_alas = ["Alas picantes", "Alas barbacoa", "Alas teriyaki", "Alas a la parrilla con miel", "Alas estilo búfalo"]
+
+
 UNIDADES = (1, 2, 3)
+
+class buy_tip:
+    money = 0
+    unidades = (1, 2, 3, 4, 5, 6, 7)
+    selec_unid = 0
+    
+    def tobuy_tip(self, tip, price, section, sub):
+        print(f"Tiene buen gusto, su pedido: {tip} tiene un precio de: {price} ")
+        print("¿Cuantas unidades desea?" + str(self.unidades))
+        self.selec_unid = int(input(": "))
+        
+        if self.selec_unid == 1:
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de {price * self.selec_unid}")
+            self.money = int(input("Por favor, pague aquí su pedido: "))
+            if self.money == price * self.selec_unid:
+                print("¿Con sal y Ketchup?")
+        
+        
+        
+
 
 Menú = ["Cafe", "Arroz", "Carne", "Leche", "Jugo", "Té", "Brocoli", "Bacalao", "Pescado", "Spaghetti"]
 
-print("Aqui esta el menú: Arroz. Cafe. Carne. Leche. Jugo. Té. Brocoli. Bacalao. Pescado. Spaghetti. ")
+print("Aqui esta el menú:")
+for wow in Menú:
+    print(wow)
+
 
 pedido = input("Que desea llevar ").capitalize()
 
@@ -84,7 +115,7 @@ if eleccionA == "Plato":
 			if dollar >= 28:
 				print("Gracias")
 		
-		#Aqui se acaba la orden del Arroz he inica la orden del cafe
+		#Aqui se acaba la orden de la l Arroz he inica la orden del cafe
 
 elif pedido == "Cafe":
  	eleccion = print("Genial, ¿De cuantos mililitros quiere su Cafe?")
@@ -209,7 +240,7 @@ if unidad == 3:
 										
 										print("Que pase un maravilloso resto del día, le deseo lo mejor")
 									elif dollar  >= 150:
-												print("Gracias de todas formas, y se le agradece su propina")
+												print("Gracias de todas formas, y se le agradece su propina") 
 												
 												while unidadC < 3:
 													print(f"Café ({500}) ml")
@@ -248,8 +279,18 @@ elif pedido == "Carne":
 	    of_in = input(": ").capitalize()
 	    
 	    if of_in == "Alas":
+	        print("¿Como les gustarían sus alas?")
+	        for wow in Tp_alas:
+	            print(wow)
+	        selection_tip = input(": ").capitalize()
 	        
-	    
-	    
-	    
-	    
+	        if selection_tip == "Alas picantes":
+	            process_tobuy(Tp_alas[0], 10, Menú[2])
+	        elif selection_tip == Tp_alas[1]:
+	            process_tobuy(Tp_alas[1], 12, Menú[2])
+	        elif selection_tip == Tp_alas[2]:
+	            process_tobuy(Tp_alas[2], 13, Menú[2])
+	        elif selection_tip == Tp_alas[3]:
+	            process_tobuy(Tp_alas[3],15, Menú[2])
+	            
+	            
