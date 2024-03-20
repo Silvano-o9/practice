@@ -1,4 +1,4 @@
-print("Bienveninos a este Restaurante")
+print("Bienvenidos a Restaurant's")
 dollar = 0
 
 wow = ""
@@ -18,7 +18,7 @@ error = "support"
 def session_buy():
 	xc = 1
 	dollaR = 0
-	print(f"Good buy, el precio de su pedido {TCcarne[0]} es de {35} dollars")
+	print(f"Good buy, el precio de su pedido {TCcarne[0]} es de {35} RES")
 	dollaR = int(input("Please,  pague aquí su pedido: "))
 	if dollaR >= 35:
 		print("Muchas gracias por su compra")
@@ -33,7 +33,7 @@ def session_buy():
 def process_tobuy(item, precio, session):
 	x = 0
 	money = 0
-	print(f"Muy buen gusto, su pedido: {item} es de ${precio} dollars ")
+	print(f"Muy buen gusto, su pedido: {item} es de ${precio} RES ")
 	print(f"¿Cuantas unidades deseas {UNIDADES}")
 	universal = int(input(":"))
 	if universal == 1:
@@ -64,30 +64,81 @@ TCcarne = ["Bleu", "Inglés", "Termino medio", "Tres cuartos", "Bien Cocido"]
 Tcarne = ["Cerdo", "Pollo", ]
 TPcarne = ["Alas", "Mulo corto", "Mulo largo", "Pechuga",]
 
-Tp_alas = ["Alas picantes", "Alas barbacoa", "Alas teriyaki", "Alas a la parrilla con miel", "Alas estilo búfalo"]
+Tp_alas = ["Alas picantes", "Alas barbacoa", "Alas teriyaki", "Alas a la parrilla con miel", "Alas estilo bufalo"]
 
 
 UNIDADES = (1, 2, 3)
+
+## INICIA LA CLASE BUY TIP
 
 class buy_tip:
     money = 0
     unidades = (1, 2, 3, 4, 5, 6, 7)
     selec_unid = 0
+    selection = ""
+    
     
     def tobuy_tip(self, tip, price, section, sub):
         print(f"Tiene buen gusto, su pedido: {tip} tiene un precio de: {price} ")
         print("¿Cuantas unidades desea?" + str(self.unidades))
         self.selec_unid = int(input(": "))
+       
+       
         
         if self.selec_unid == 1:
-            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de {price * self.selec_unid}")
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de ${price * self.selec_unid} RES")
             self.money = int(input("Por favor, pague aquí su pedido: "))
             if self.money == price * self.selec_unid:
-                print("¿Con sal y Ketchup?")
+                print(f"Pedido: Unidad: {section}, Session: {sub}, Part {tip}, Price: ${price * self.selec_unid} RES, Unidades: {self.selec_unid}")
+                print("Thanks, have a perfec day")
         
-        
-        
-
+        elif self.selec_unid == 2:
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de ${price * self.selec_unid} RES")
+            self.money = int(input("Por favor, pague aquí su pedido: "))
+            if self.money == price * self.selec_unid:
+                print(f"Pedido: Unidad: {section}, Session: {sub}, Part {tip}, Price: ${price * self.selec_unid} RES, Unidades: {self.selec_unid}")
+                print("Thanks, have a perfec day")
+                
+        elif self.selec_unid == 3:
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de ${price * self.selec_unid} RES")
+            self.money = int(input("Por favor, pague aquí su pedido: "))
+            if self.money == price * self.selec_unid:
+                print(f"Pedido: Unidad: {section}, Session: {sub}, Part {tip}, Price: ${price * self.selec_unid} RES, Unidades: {self.selec_unid}")
+                print("Thanks, have a perfec day")
+                
+        elif self.selec_unid == 4:
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de ${price * self.selec_unid} RES")
+            self.money = int(input("Por favor, pague aquí su pedido: "))
+            if self.money == price * self.selec_unid:
+                print(f"Pedido: Unidad: {section}, Session: {sub}, Part {tip}, Price: ${price * self.selec_unid} RES, Unidades: {self.selec_unid}")
+                print("Thanks, have a perfec day")
+                
+        elif self.selec_unid == 5:
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de ${price * self.selec_unid} RES")
+            self.money = int(input("Por favor, pague aquí su pedido: "))
+            if self.money == price * self.selec_unid:
+                print(f"Pedido: Unidad: {section}, Session: {sub}, Part {tip}, Price: ${price * self.selec_unid} RES, Unidades: {self.selec_unid}")
+                print("Thanks, have a perfec day")
+                
+        elif self.selec_unid == 6:
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de ${price * self.selec_unid} RES")
+            self.money = int(input("Por favor, pague aquí su pedido: "))
+            if self.money == price * self.selec_unid:
+                print(f"Pedido: Unidad: {section}, Session: {sub}, Part {tip}, Price: ${price * self.selec_unid} RES, Unidades: {self.selec_unid}")
+                print("Thanks, have a perfec day")
+                
+        elif self.selec_unid == 7:
+            print(f"Espero y le encante el servicio,  su pedido {tip}x{self.selec_unid}, tiene un precio de ${price * self.selec_unid} RES")
+            self.money = int(input("Por favor, pague aquí su pedido: "))
+            if self.money == price * self.selec_unid:
+                print(f"Pedido: Unidad: {section}, Session: {sub}, Part {tip}, Price: ${price * self.selec_unid} RES, Unidades: {self.selec_unid}")
+                print("Thanks, have a perfec day")
+                
+tip_buy = buy_tip()                
+                          
+                
+## FINALIZA CLASE BUY TIP        
+                
 
 Menú = ["Cafe", "Arroz", "Carne", "Leche", "Jugo", "Té", "Brocoli", "Bacalao", "Pescado", "Spaghetti"]
 
@@ -102,7 +153,7 @@ if pedido == "Arroz":
 	eleccionA = input("Genial, ¿Quiere una Taza o un Plato de arroz? ").capitalize()
 	
 	if eleccionA == "Taza":
-		print(f"Genial, su pedido es de {precioAT} dollars ")
+		print(f"Genial, su pedido es de {precioAT} RES ")
 		dollar = int(input("Pague aqui: "))
 		if dollar == precioAT:
 			print("Muchas gracias")
@@ -110,7 +161,7 @@ if pedido == "Arroz":
 			#version plato
 			
 if eleccionA == "Plato":
-			print(f"Genial, su pedido es de {28} dollars ")
+			print(f"Genial, su pedido es de {28} RES ")
 			dollar = int(input("Pague aqui: "))
 			if dollar >= 28:
 				print("Gracias")
@@ -119,17 +170,20 @@ if eleccionA == "Plato":
 
 elif pedido == "Cafe":
  	eleccion = print("Genial, ¿De cuantos mililitros quiere su Cafe?")
+ 	
  	#Aqui pide de cuantos milímetros quiere el cafe
+ 	
  	eleccionMC = int(input(f"De {100} ml, {200} ml, {500} ml." ))
+ 	
  	#Aqui le da la opción al usuario para que elija, no tiene que poner "ml",solo con el número basta, o sea, 100. 200. o 500"
+ 	
  	if eleccionMC == 100:
- 		print(f"Muchas gracias por su pedido, el costo del Cafe de {100} ml es de {10} dollars")
- 		#Aqui le esta diciendo cuanto cuesta el cafe
+ 		print(f"Muchas gracias por su pedido, el costo del Cafe de {100} ml es de {10} RES")
  		unidad = int(input("¿Cuantos quiere, 2. 3. ? "))
- 		#Aqui pide cuantos quiere, si es que quiere más de uno, si no es así, solo debe de poner 1.
+
  		
  		if unidad == 2:
- 				print(f"Muchas gracias, el costo de su pedido es de {20} dollars ")
+ 				print(f"Muchas gracias, el costo de su pedido es de {20} RES ")
  				dollar = int(input("Por favor, pague aqui "))
  				if dollar == 20:
  					print("Gracias por su compra.")
@@ -141,7 +195,7 @@ elif pedido == "Cafe":
  					#Aqui se acaba el proceso de compra de la unidad 2, en caso de que el usuario elija que quiere 2 cafes.
  					
  		elif unidad == 3:
- 				print(f"Muchas gracias, el costo de su pedido es de {30} dollars ")
+ 				print(f"Muchas gracias, el costo de su pedido es de {30} RES ")
  				dollar = int(input("Por favor, pague aqui "))
  				if dollar >= 30:
  					print("Muchas gracias por su compra")
@@ -154,10 +208,10 @@ elif pedido == "Cafe":
  			#Aqui se acaba eleccionMC == 100 (O café de 100 milímetros, he inicia eleccionMC 200 o (Café de 100 milímetros)
  			
  	elif eleccionMC == 200:
- 			print(f"Muchas gracias por su pedido, el costo del Cafe de {200} ml es de {25} dollars")
+ 			print(f"Muchas gracias por su pedido, el costo del Cafe de {200} ml es de {25} RES")
  			unidad = int(input("¿Cuantos quiere, 2. 3. ? "))
  			if unidad == 2:
- 				print(f"Muchas gracias por su compra, su pedido es de {50} dollars")
+ 				print(f"Muchas gracias por su compra, su pedido es de {50} RES")
  				dollar = int(input("Por favor, pague aquí "))
  			if dollar >= 50:
  				print("Muchas gracias por su compra")
@@ -170,7 +224,7 @@ elif pedido == "Cafe":
  						print("Have a perfec day.")
  				#Aqui finaliza el proceso de compra de la unidad 2 de la eleccionMC 200 ha inicia la unidad 3
  	elif unidad == 3:
- 										print(f"Muchas gracias por su compra, el costo de su pedido es de {75} dollars")
+ 										print(f"Muchas gracias por su compra, el costo de su pedido es de {75} RES")
  										dollar = int(input("Por favor, pague aquí "))
  			
  	if dollar >= 75:
@@ -184,11 +238,11 @@ elif pedido == "Cafe":
  						# Se acaba eleccionMC = 200 he inica eleccionMC = 500
  						
  	elif eleccionMC == 500:
-    	 print(f"Gracias por su pedido, el costo del Café de {500} ml es de {50} dollars")
+    	 print(f"Gracias por su pedido, el costo del Café de {500} ml es de {50} RES")
     	 unidad = int(input(f"¿Cuantos desea? {2}. {3}. o solo {1}. "))
     	 if unidad == 1:
  							print("Una lástima, 2 o 3 hubiera sido mejor, pero lo comprendemos,")
- 							print("El precio de su pedido es de {50} dollars")
+ 							print("El precio de su pedido es de {50} RES")
  							dollar = int(input("Por favor, pague aquí "))
  							if dollar == 50:
  								print("Muchas gracias por su compra de {1} cafe, su pedido se le entregará enseguida")
@@ -199,13 +253,13 @@ elif pedido == "Cafe":
  							else:
  								print("Hey friend, póngase a trabajar, ande a chambear")
  								
- 						#fin de la unidad 1, empieza la 2.
+ #FIN UNIDAD 1, STAR UNIDAD 2
  								   
 if unidad == 2:
 	wow = input("Vamos, uno más ¿si? y/n ")
 	if wow == "y":
 		print("Esoo, le daremos +1 totalmente gratis por ser un buen cliente")
-		print("El precio de su pedido es de 100 dollars")
+		print("El precio de su pedido es de 100 RES")
 		dollar = int(input("Please, pagué aquí "))
 		print("Vayase al diablo entonces")
 		if dollar == 100:
@@ -215,7 +269,7 @@ if unidad == 2:
 				unidadC += 1
 if wow == "n":
 					print("Una pena")
-					print("El precio de su pedido es de 100 dollars")
+					print("El precio de su pedido es de 100 RES")
 					dollar = int(input("Please, pague aquí "))
 					if dollar == 100:
 						print("Gracias por su compra")
@@ -229,8 +283,8 @@ if wow == "n":
 								
 if unidad == 3:
 									print("Eso es, ni uno ni dos, 3 de una vez,  usted si es un buen bebedor de Café no como esos del 'ay el café le hace daño al corazón' (acto seguido lo ves fumando vape XD")
-									print(f"Dejémonos de cuentos, el precio de su café es de {150} dollars")
-									dollar = int(input(f"Como buen bebedor de Café, le daremos una rebaja de {20} dollars,  asi que, puede pagar {130} dollars,  pero viniendo de usted, seguro que nos da propina: "))
+									print(f"Dejémonos de cuentos, el precio de su café es de {150} RES")
+									dollar = int(input(f"Como buen bebedor de Café, le daremos una rebaja de {20} RES,  asi que, puede pagar {130} RES,  pero viniendo de usted, seguro que nos da propina: "))
 									if dollar < 150:
 										
 										print("Gracias por hacer efectiva su rebaja por ser un buen cliente, se le quiere mucho")
@@ -248,7 +302,7 @@ if unidad == 3:
 												
 												print("Pase un lindo día, se le quiere")
 												
-												#session carne
+#SESION CARNE
  
 elif pedido == "Carne":
 	print("De maravilla, gracias a dios no eres vegano, podrás disfrutar de lo que es SABROSO")
@@ -268,29 +322,33 @@ elif pedido == "Carne":
 		    process_tobuy(TCcarne[3], 165, Menú[2])
 		elif of_in == "Bien cocido":
 		    process_tobuy(TCcarne[4], 185, Menú[2])
-		
-		#session pollo
-		
-	if selection == "Pollo":
-	    print("Lo mejor de lo mejor, la carne de pollo")
-	    print("¿Que parte le gustaría?")
-	    for wow in TPcarne:
-	        print(wow)
-	    of_in = input(": ").capitalize()
-	    
-	    if of_in == "Alas":
-	        print("¿Como les gustarían sus alas?")
-	        for wow in Tp_alas:
-	            print(wow)
-	        selection_tip = input(": ").capitalize()
-	        
-	        if selection_tip == "Alas picantes":
-	            process_tobuy(Tp_alas[0], 10, Menú[2])
-	        elif selection_tip == Tp_alas[1]:
-	            process_tobuy(Tp_alas[1], 12, Menú[2])
-	        elif selection_tip == Tp_alas[2]:
-	            process_tobuy(Tp_alas[2], 13, Menú[2])
-	        elif selection_tip == Tp_alas[3]:
-	            process_tobuy(Tp_alas[3],15, Menú[2])
+#SESION POLLO				
+	if selection == "Pollo":    
+            print("Lo mejor de lo mejor, la carne de pollo")
+            print("¿Que parte le gustaría?")
+            for wow in TPcarne:
+                print(wow)                
+            of_in = input(": ").capitalize()
+#PART-ALAS                
+            if of_in == "Alas":
+                print("¿Como les gustarían sus alas?")
+                for wow in Tp_alas:
+                    print(wow)
+                                    
+                selection_tip = input(": ").capitalize()
+                
+                if selection_tip == "Alas picantes":
+                    tip_buy.tobuy_tip(Tp_alas[0], 7, Menú[2], Tcarne[1])
+                elif selection_tip == Tp_alas[1]:
+                    tip_buy.tobuy_tip(Tp_alas[1], 10, Menú[2], Tcarne[1])
+                elif selection_tip == Tp_alas[2]:
+                    tip_buy.tobuy_tip(Tp_alas[2], 13, Menú[2], Tcarne[1])
+                elif selection_tip == Tp_alas[3]:
+                    tip_buy.tobuy_tip(Tp_alas[3], 15, Menú[2], Tcarne[1])
+                elif selection_tip == Tp_alas[4]:
+                    tip_buy.tobuy_tip(Tp_alas[4], 19, Menú[2], Tcarne[1])
+                
+                
+	                
 	            
-	            
+	            	            
